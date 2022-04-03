@@ -5,64 +5,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosana</title>
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
 </head>
-<body background="images/fond.jpg">
+<body background="images/fond.jpg" translate="no" onload="draw()">
     <header> 
         <!-- shortcut icon para colocar icono perzonalizado -->
         <link rel="shortcut icon" href="images/rosa.png">
         <link rel="stylesheet" href="css/custom.css" />
-        <script src="js/bootstrap.min.js"></script>
-        <div class="dropdown">
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+        <script src="js/jquery-2.2.4.min.js"></script>
+   
+    <title>Mi Hoja de Vida</title>
+    
+  
+    <canvas id="bg"></canvas>
+    <main id="content">
+      <div class="hex moved"></div><h1><span> R o s a n a    G a r r i d o :</span></h1>    
+        <div class="card mb-3" style="max-width: 540px;">
+
+            <img src="images/perfil.jpeg" class="img-evento" alt="perfil">
           </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="contenidotech">
-            <div class="card-title"> <h1>Tecnologia actual</h1></div>
-            <p class="tabulacion"><span class="capitalLetter">A</span>ctualmente nos vemos obligados a conocer cada vez más sobre el funcionamiento de las nuevas tecnologías,
-simplemente para no quedarnos detras de las nuevas generaciones.</p> <br> 
-<p class="tabulacion">
-    La tecnologías se está agilizando, optimizando y perfeccionando constantemente, afectando las actividades que realizamos en nuestro día a día. 
-     La comunicación en la actualidad es algo que ha avanzado mucho,
-      una comunicación que es mucho más rápida a través de Internet. Transmitir mensajes, imágenes, vídeos y todo 
-      tipo de documentos desde diferentes partes del mundo a cualquier hora del día es algo que ha 
-      desplazado definitivamente el envío de documentos por otros medios.
-</p> <br>
-<p class="tabulacion">
-    Los nuevos "aparatos" electrónicos nos permiten realizar tareas que se hacían de forma manual, eso sí, de una forma más ágil y eficaz.
- </p> <br>
- <p class="tabulacion">
-    Hoy en día la tecnología ha tenido un impacto que ha afectado positiva y negativamente en nuestra sociedad, 
-    pero definitivamente, se convirtió en indispensable para todo y para todos. Ese nuevo universo ha llegado para quedarse y formar una nueva sociedad, 
-    condicionada de manera absoluta por la tecnología. </p>
-           </div>
-           <div class="contenidosobremi">
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="images/perfil.jpeg" class="img-evento" alt="perfil">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <div class="card-title"><h1>Sobre Mi</h1></div>
-                      <div class="card-text"><p class="tabulacion">&#9995; Hola...!! soy Rosana Garrido. Estudiante de Informatica en UPTYAB desde 2019. <br>
-                        Amo la música, la cocina, la programacion y a los perritos y gatitos... &#128525; <br>
-                        He pasado por mucho, me he levantado cada vez que he caido, y cada desilusion, por grande que haya sido,
-                        no ha podido con mis ganas de luchar y seguir adelante... <br></p>
-                        <p class="tabulacion"> No temo empezar desde cero una y otra  vez!</p> <br>
-                            <p class="tabulacion">Mis metas van más allá de alcanzar un titulo: Es cumplir con mis sueños... <br> </p>
-                            <p class="tabulacion"></p>y yo siempre estoy soñando...!!</p>                   
-                  </div>
-                </div>
-              </div>
           
-      
+    <div class="hex moved"></div><h1><span>Sobre Mi:</span></h1>
+    <div class="subtext" id="main">
+        <div class="card-text">
+            <p class="tabulacion"> Hola...!! soy Rosana Garrido. Estudiante de Informatica en UPTYAB desde 2019.
+            </p>
+            <p class="tabulacion">
+                Hace Muchisimo tiempo, sin saber que hacer con mi vida, 
+                entré a un curso de programación y comencé a manejar lenguajes sencillos
+                como el Turbo Pascal. </p> 
+            <p class="tabulacion">
+                Habia hecho ya algunos otros cursos de computación, sólo lo basico: transcribir y manejar hojas de calculo
+                Pero la programación fue, definitivamente, otro nivel.
+                Cuando logré que mi primer programa 
+                compilara, me sentí... Wow...
+            </p> 
+            <p class="tabulacion">  Alli fue cuando supe que quería dedicarme a la programación...!! 
+            </p>
+            <p class="tabulacion">
+                Años después, tuve el gusto de conocer estudiantes de Informática, 
+                con una propuesta innovadora llamada Interware. 
+                Me siento agradecida pues con ellos, aprendi muchísimo sobre lógica y lenguajes 
+                de programación, afirmando en mí mi deseo de ser programadora...
+                Gracias a todos...!! especialmente a mi querido amigo Jhonny Peroza, quien posee 
+                un gran talento Informático y fue de mucho apoyo en mi aprendizaje. 
+            </p>
+            <p class="tabulacion">
+               Pasaron muchos años más, y miles de cosas mas...
+               Cada vez que lo intento han tratado de desilusionarme, 
+               me han dicho que no puedo, que ya para qué me esfuerzo ... 
+               Cada desilusion, por grande que haya sido,
+            no ha podido con mis ganas de luchar y seguir adelante...</p>
+            <p class="tabulacion"> No temo empezar desde cero una y otra vez!</p>
+                <p class="tabulacion">Mis metas van más allá de alcanzar un titulo: 
+                    Es cumplir con mis sueños... </p>
+                <p class="tabulacion"></p>y yo siempre estoy soñando...!!</p> 
         </div>
+    
+             <div class="hex"></div><h2><span>Habilidades</span></h2>
+                <div class="subtext coll">
+                    <ul>
+                        <li>He trabajado con lenguajes de programación como JavaScript, php y CSS.</li>
+                        <li> Diseño de Base de Datos con MYSQL PHPMYADMIN y XAMPP.</li>
+                        <li>Siempre tuve especial afecto por las matemáticas y me encanta resolverlas.</li>
+                        <li>Tambien me gusta el diseño. No lo he estudiado a fondo, pero en este sentido
+                             soy autodidacta y muy creativa.</li>
+                        <li>Dominio del idioma ingles y portugues a nivel intermedio.</li>
+                    </ul>
+                   
+                 </div>
+    
+             <div class="hex"></div><h2><span>Hobbies &amp; Intereses</span></h2>
+                <div class="subtext coll">
+                    Amo la música, la cocina, a los perritos y gatitos... &#128525; <br>
+                    Leer es mi pasión de toda la vida. <br>
+                    Y cocinar me gusta mucho. Creo que soy buena en esto...!! sobre todo en 
+                    dulceria criolla venezolana, lo que mejor me sale es mi famosa torta de auyama...
+                </div>
+   
+                <div class="hex"></div> <h2><span>Mis Ocupaciones Actuales</span></h2>
+                    <div class="subtext coll">
+                        Actualmente, estoy repasando proyectos de codificación para implementar un sistema Web
+                        que solucione alguna problematica en una institución en cumplimiento con el Proyecto 
+                        Socio Tecnológico enmarcado en el Perfil de un Ingeniero Informático egresado de UPTYAB 
+                    </div>      
+                <div class="hex"></div><h2><span>Encuentrame...!!!</span></h2>
+                    <div class="subtext coll">
+                          <a>Twitter</a> | <a>facebook</a> | <a>linkedin</a>
+                    </div>
+                <div class="hex"></div><h2><span>Contáctame..!!</span></h2>
+                    <div class="subtext coll">
+                            <ul>
+                                <li>Whatsapp: +584145442255</li>
+                                <li>E-mail: <a>rosanagarrido1972@gmail.com</a></li>
+                            </ul>
+                    </div>   
+    </div>
+
+
+
     </main>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="one"><path d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="two"><path d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"></path></svg>
+    <div id="hex-holder">
+    <div class="hex" id="uno"></div>
+    <div class="hex" id="dos"></div>
+    <div class="hex" id="tres"></div>
+    </div>
+     </div>    
+    <script id="rendered-js">
+    function draw() {
+      var canvas = $('canvas')[0];
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'rgb(200, 0, 0)';
+        ctx.fillRect(10, 10, 50, 50);
+        ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+        ctx.fillRect(30, 30, 50, 50);
+      }
+    }
+    
+    $(document).ready(function () {
+      // $(document).draw(); DIBUJO DE ONDAS xd
+      $('#content').animate({
+        opacity: 1,
+        marginTop: '0' },
+      800);
+      $('h2').click(function () {
+        $(this).next('.subtext').slideToggle('fast');
+        $(this).children('.hex').toggleClass('moved');
+      });
+    });
+    //# sourceURL=pen.js
+  </script>
 </body>
 </html>
